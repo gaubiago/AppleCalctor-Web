@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('./webFonts/roboto_light_macroman/Roboto-Light-webfont.woff');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./webFonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
+}
+
+.calculator {
+  font-family: "Roboto-Regular", sans-serif;
+  --background-color: #1a1a1a; /* dark black */
+  --black-buttons: #262626; /*	#333333; */
+  --gray-buttons: 	#9999a9; /* #999999; */
+  --orange-buttons:  #ff8c1a; /* #ff8600; */
+  --white-nos: white;
+  --black-nos: black;
+  --transpBButtons-click: rgba(255,255,255,0.25);
+  --transpGButtons-click: rgba(255,255,255,0.7);
+  --transpOButtons-click: rgba(255, 204, 153, 1);
+  margin: auto;
+  --calc-width: 23em;
+  margin: auto;
+  width: 50%;
+  border-style: solid;
+  border-color: var(--background-color);
+  border-width: 7em 1em 1em 1em;
+  border-radius: 10%;
+  width: var(--calc-width);
+}
+
+#display {
+  font-family: "Roboto-Light", sans-serif;
+  text-align: end;
+  font-size: 6em;
+  font-weight: 100;
+  grid-column: 1 / 5;
+  padding-right: 0.235em;
+  padding-left: 0.235em;
+  padding-bottom: 0.2em;
+  background: var(--background-color);
+  color: var(--white-nos);
+  border: 0;
+}
+
+.keyboard {
+  margin: auto;
+  width: var(--calc-width);
+  text-align: center;
+  background: var(--background-color);
+  display: grid;
+  grid-template-columns: repeat(4, 5em);
+  grid-template-rows: 6em repeat(5, 5em);
+  row-gap: 1em;
+  column-gap: 1em;
+}
+
+.item{
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text: center;
+  background: LightGray;
+  border: LightGray;
+  border-radius: 50%;
+}
+
+.item:hover{
+  cursor: pointer; 
+}
+
+.zero{
+  grid-column: 1 / 3;
+  border-radius: 50px 50px 50px 50px;
+  padding-right: 2.2em;
+}
+
+.grayButtons{
+  background: var(--gray-buttons);
+  color: var(--black-nos);
+}
+
+.transpGButtons{
+  background: var(--transpGButtons-click);
+}
+
+.blackButtons{
+  background: var(--black-buttons);
+  color: var(--white-nos);
+}
+
+.transpBButtons{
+  background: var(--transpBButtons-click); 
+}
+
+.orangeButtons{
+  background: var(--orange-buttons);
+  color: var(--white-nos);
+}
+
+.transpOButtons{
+  background-color: var(--transpOButtons-click);
+}
+
+.invertClrOButtons{
+  color: var(--orange-buttons);
+  background: var(--white-nos);
+}
